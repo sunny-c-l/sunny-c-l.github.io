@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>网络多人聊天室</title>
-    <url>/2026/08/19/chat/</url>
+    <url>/2026/08/19/chat.html</url>
     <content><![CDATA[<p>用deepseek生成了一个网络多人聊天室</p>
 <p>核心原理：</p>
 <ol>
@@ -34,7 +34,7 @@
   </entry>
   <entry>
     <title>题解：CF2246B ezraft and Array</title>
-    <url>/2026/08/19/solution-CF2246B/</url>
+    <url>/2026/08/19/solution-CF2246B.html</url>
     <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF2246B">题目链接</a></p>
 <p>考虑归纳构造。令 $S_k = \sum_{i=1}^k a_i$。假设已经构造好了 $k-1$ 个互不相同的正整数 $a_1,a_2,\dots,a_{k-1}$，并且满足条件：对任意 $1 \le i \le k-1$，都有 $a_i \mid S_{k-1}$。</p>
 <p>现在我们添加第 $k$ 个数，令 $a_k = S_{k-1}$。此时新的总和为 $S_k = S_{k-1} + a_k = 2S_{k-1}$。<br>
@@ -63,7 +63,7 @@ $a_1=1,\ a_2=2,\ a_3=3$；对于 $i \ge 4$，令 $a_i = S_{i-1}$。<br>
   </entry>
   <entry>
     <title>VScode插件</title>
-    <url>/2026/08/19/VScode%E6%8F%92%E4%BB%B6/</url>
+    <url>/2026/08/19/VScode%E6%8F%92%E4%BB%B6.html</url>
     <content><![CDATA[<p>自用VScode插件，有需要自取</p>
 <h2 id="1-background">1.<a href="https://marketplace.visualstudio.com/items?itemName=shalldie.background">background</a></h2>
 <p>可以更换VScode的背景图，还能对不同的区域设置不同的背景图。</p>
