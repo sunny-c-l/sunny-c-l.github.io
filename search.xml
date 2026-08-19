@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>VScode插件</title>
+    <url>/2026/08/19/VScode%E6%8F%92%E4%BB%B6/</url>
+    <content><![CDATA[<h2 id="1-background"><a href="#1-background" class="headerlink" title="1.background"></a>1.<a href="https://marketplace.visualstudio.com/items?itemName=shalldie.background">background</a></h2><p>可以更换VScode的背景图，还能对不同的区域设置不同的背景图。</p>
+<h2 id="2-CPH-NG"><a href="#2-CPH-NG" class="headerlink" title="2.CPH-NG"></a>2.<a href="https://marketplace.visualstudio.com/items?itemName=langningchen.cph-ng">CPH-NG</a></h2><p>下一代CPH，比CPH好用，专为OIER设计，有对拍，设置SPJ，测量时间空间等功能。</p>
+<h2 id="3-Power-Mode"><a href="#3-Power-Mode" class="headerlink" title="3.Power Mode"></a>3.<a href="https://marketplace.visualstudio.com/items?itemName=hoovercj.vscode-power-mode">Power Mode</a></h2><p>打代码的时候在光标处产生特效，整个代码产生抖动，有点像打音游。</p>
+<h2 id="4-Thief-Book"><a href="#4-Thief-Book" class="headerlink" title="4.Thief-Book"></a>4.<a href="https://marketplace.visualstudio.com/items?itemName=C-TEAM.thief-book">Thief-Book</a></h2><p>摸鱼看书神器，可以上课看小说</p>
+<h2 id="5-tldraw-Excalidraw"><a href="#5-tldraw-Excalidraw" class="headerlink" title="5.tldraw&#x2F;Excalidraw"></a>5.<a href="https://marketplace.visualstudio.com/items?itemName=tldraw-org.tldraw-vscode">tldraw</a>&#x2F;<a href="https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor">Excalidraw</a></h2><p>两种不同的白板，可以画图</p>
+<h2 id="6-Office-Viewer"><a href="#6-Office-Viewer" class="headerlink" title="6.Office Viewer"></a>6.<a href="https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office">Office Viewer</a></h2><p>查看word，excel，ppt，pdf等文件，还附带一个类似typora的Markdown编辑器(但是有点缺陷)</p>
+<h2 id="7-Markdown-Editor"><a href="#7-Markdown-Editor" class="headerlink" title="7.Markdown Editor"></a>7.<a href="https://marketplace.visualstudio.com/items?itemName=zaaack.markdown-editor">Markdown Editor</a></h2><p>类似typora的Markdown编辑器(但是也有缺陷)</p>
+<h2 id="8-vscode-icons"><a href="#8-vscode-icons" class="headerlink" title="8.vscode-icons"></a>8.<a href="https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons">vscode-icons</a></h2><p>图标库</p>
+]]></content>
+      <tags>
+        <tag>工具</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网络多人聊天室</title>
+    <url>/2026/08/19/chat/</url>
+    <content><![CDATA[<p>体验地址： <a href="https://sunny-c-l.github.io/chat/">https://sunny-c-l.github.io/chat/</a></p>
+<p>仓库地址：<a href="https://github.com/sunny-c-l/chat/">https://github.com/sunny-c-l/chat/</a></p>
+]]></content>
+      <tags>
+        <tag>AI项目</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>题解：CF2246B ezraft and Array</title>
+    <url>/2026/08/19/solution-CF2246B/</url>
+    <content><![CDATA[<p><a href="https://www.luogu.com.cn/problem/CF2246B">题目链接</a></p>
+<p>考虑归纳构造。令 $S_k &#x3D; \sum_{i&#x3D;1}^k a_i$。假设已经构造好了 $k-1$ 个互不相同的正整数 $a_1,a_2,\dots,a_{k-1}$，并且满足条件：对任意 $1 \le i \le k-1$，都有 $a_i \mid S_{k-1}$。</p>
+<p>现在我们添加第 $k$ 个数，令 $a_k &#x3D; S_{k-1}$。此时新的总和为 $S_k &#x3D; S_{k-1} + a_k &#x3D; 2S_{k-1}$。<br>对于原有的 $a_i\ (i &lt; k)$，由归纳假设 $a_i \mid S_{k-1}$，自然有 $a_i \mid 2S_{k-1} &#x3D; S_k$。<br>对于新加入的 $a_k$，$a_k &#x3D; S_{k-1} \mid 2S_{k-1} &#x3D; S_k$。<br>因此所有 $k$ 个数都满足条件。同时，由于 $S_{k-1}$ 严格大于前面已出现的所有数，$a_k$ 不会与已有元素重复。</p>
+<p>这便给出了一种从 $k-1$ 到 $k$ 的合法扩展方法。</p>
+<p><strong>基础情况</strong></p>
+<ul>
+<li><strong>$n &#x3D; 1$</strong>：任意一个正整数即可，例如输出 $1$。</li>
+<li><strong>$n &#x3D; 2$</strong>：无解。证明：设两个互异正整数 $a,b$ 满足 $a \mid (a+b)$ 且 $b \mid (a+b)$。由 $a \mid (a+b) $ 得出 $ a \mid b$，同理 $b \mid a$，故 $a &#x3D; b$，与互异矛盾。</li>
+<li><strong>$n &#x3D; 3$</strong>：可取 $a &#x3D; [1, 2, 3]$。总和 $S_3 &#x3D; 6$，显然 $1\mid6,\ 2\mid6,\ 3\mid6$。</li>
+</ul>
+<p><strong>一般情况（$n \ge 4$）</strong></p>
+<p>从基础解 $[1,2,3]$ 开始，反复使用上述归纳扩展：<br>$a_1&#x3D;1,\ a_2&#x3D;2,\ a_3&#x3D;3$；对于 $i \ge 4$，令 $a_i &#x3D; S_{i-1}$。<br>此时序列为 $1,\ 2,\ 3,\ 6,\ 12,\ 24,\ \dots$，通项为 $a_i &#x3D; 6 \times 2^{i-4}\ (i \ge 4)$。</p>
+<p>当 $n \le 50$ 时，最大的元素出现在 $i&#x3D;n&#x3D;50$，即 $a_{50} &#x3D; S_{49} &#x3D; 3 \times 2^{47} \approx 4.2 \times 10^{14}$，远小于题目限制的 $10^{17}$，不会溢出。</p>
+<p>时间复杂度 $O(Tn)$。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fo(i,a,b) for(int i=a;i&lt;=b;i++)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> fd(i,a,b) for(int i=a;i&gt;=b;i--)</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> int long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N=<span class="number">100020</span>;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="function"><span class="type">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> T;</span><br><span class="line">    cin&gt;&gt;T;</span><br><span class="line">    <span class="keyword">while</span>(T--)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;n;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;1&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">2</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;-1&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">3</span>)&#123;<span class="built_in">puts</span>(<span class="string">&quot;1 2 3&quot;</span>);<span class="keyword">continue</span>;&#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;1 2 3 &quot;</span>);</span><br><span class="line">        <span class="type">int</span> res=<span class="number">6</span>;<span class="comment">//S3=6</span></span><br><span class="line">        <span class="built_in">fo</span>(i,<span class="number">4</span>,n)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;%lld &quot;</span>,res);</span><br><span class="line">            res*=<span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">puts</span>(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>题解</tag>
+      </tags>
+  </entry>
+</search>
